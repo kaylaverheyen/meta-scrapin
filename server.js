@@ -28,14 +28,16 @@ app.use(express.static("public"));
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds221155.mlab.com:21155/heroku_2fvm3cf1",
 //     { useNewURLParser: true }
 // );
- 
+
 // mongoose.connect(
 //     process.env.MONGODB_URI ||
 //     "mongodb://user:password1@ds123645.mlab.com:23645/heroku_qv7v1pk6",
 //     { useNewURLParser: true }
 // );
 
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password2@ds133275.mlab.com:33275/heroku_jqrxbcj3",
+    { useNewURLParser: true }
+);
 
 
 // Routes
