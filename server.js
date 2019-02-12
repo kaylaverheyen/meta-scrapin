@@ -35,9 +35,6 @@ app.use(express.static("public"));
 //     { useNewURLParser: true }
 // );
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password2@ds133275.mlab.com:33275/heroku_jqrxbcj3",
-    { useNewURLParser: true }
-);
 
 
 // Routes
@@ -142,6 +139,11 @@ app.post("/articles/:id", function (req, res) {
             res.json(err);
         });
 });
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password2@ds133275.mlab.com:33275/heroku_jqrxbcj3",
+    { useNewURLParser: true }
+);
+
 
 // Start the server
 app.listen(PORT, function () {
